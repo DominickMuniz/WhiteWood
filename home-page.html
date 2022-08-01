@@ -29,13 +29,14 @@
         
         .navbar {
           overflow: hidden;
-          background-color: #333; 
+          background-color: #FFFFFF; 
         }
         
         .navbar a {
           float: left;
-          font-size: 16px;
-          color: white;
+          font-size: 17px;
+          font-weight: bold;
+          color: #1957B2;
           text-align: center;
           padding: 14px 16px;
           text-decoration: none;
@@ -48,9 +49,10 @@
         
         .subnav .subnavbtn {
           font-size: 16px;  
+          font-weight: bold;
           border: none;
           outline: none;
-          color: white;
+          color: #1957B2;
           padding: 14px 16px;
           background-color: inherit;
           font-family: inherit;
@@ -58,21 +60,21 @@
         }
         
         .navbar a:hover, .subnav:hover .subnavbtn {
-          background-color: red;
+          background-color: #FFFFFF;
         }
         
         .subnav-content {
           display: none;
-          position: absolute;
+          position: absolute ;
           left: 0;
-          background-color: red;
+          background-color: #FFFFFF;
           width: 100%;
           z-index: 1;
         }
         
         .subnav-content a {
           float: left;
-          color: white;
+          color: #1957B2;
           text-decoration: none;
         }
         
@@ -178,6 +180,15 @@
         width: 50%;
         }
 
+
+
+        .row {
+
+            content: "";
+            display: flex;
+            clear: both;
+        }
+
         /* Clear floats after the columns */
         .row:after {
         content: "";
@@ -185,6 +196,13 @@
         clear: both;
   
         }
+
+
+
+
+
+
+
 
         .masonrytiles {
             margin: 3%;
@@ -215,6 +233,71 @@
 
 
 
+
+        .header3column {
+        display:flex;    
+        align-items: center;
+        
+        }
+
+        .headerLeft {
+            flex: 1;
+        }
+        
+        
+        .headerRight {
+            flex: 1;
+            position: relative;
+            justify-content: center;
+        }
+
+        .headerMiddle {
+            flex: 2;
+            position: relative;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+            width: 100%;
+            }
+        }   
+
+
+
+
+
+
+        .headerButton {
+            position: relative;
+            display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                background-color:#1957B2;
+                color: #fff;
+                border:none;
+                box-shadow: 0px 0px 2px 2px rgb(16, 47, 255);
+                padding:15px;
+                min-height:20px; 
+                min-width: 120px;
+                font-family: Montserrat, Helvetica, sans-serif;
+                font-size: 17px;
+
+
+        }       
+
+
+
+            /*
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+
+        flex-direction: column; 
+
+        justify-content: center;
+            */
+
         </style>
         <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
         <!--[if lt IE 9]>
@@ -227,41 +310,56 @@
     
         <header>
           
+            <div class="row">
+            <div class="header3column headerLeft">
           <img width="300" height="75" src="https://whitewoodmedia.com/wp-content/uploads/2022/07/500x125pxlogo-300x75.png">
-
         
+        </div>
+
+        <div class="header3column headerMiddle"> 
           <div class="navbar">
             <a href="https://whitewoodmedia.com/">Home</a>
+
             <div class="subnav">
-              <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+                <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                  <a href="https://whitewoodmedia.com/services/graphic-design-services/">Graphic Design Services</a>
+                  <a href="https://whitewoodmedia.com/services/social-media-marketing-services/">Social Media Marketing Services</a>
+                  <a href="https://whitewoodmedia.com/services/search-engine-optimization-seo/">Search Engine Optimization (SEO)</a>
+                  <a href="https://whitewoodmedia.com/services/web-development/">Web Development</a>
+                </div>
+              </div> 
+  
+            <div class="subnav">
+              <button class="subnavbtn">About Us <i class="fa fa-caret-down"></i></button>
               <div class="subnav-content">
-                <a href="#company">Company</a>
+                <a href="https://whitewoodmedia.com/about-us/">Company</a>
                 <a href="#team">Team</a>
                 <a href="#careers">Careers</a>
+                <a href="https://whitewoodmedia.com/site-map/">Site Map</a>
               </div>
             </div> 
-            <div class="subnav">
-              <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-              <div class="subnav-content">
-                <a href="#bring">Bring</a>
-                <a href="#deliver">Deliver</a>
-                <a href="#package">Package</a>
-                <a href="#express">Express</a>
-              </div>
-            </div> 
-            <div class="subnav">
-              <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-              <div class="subnav-content">
-                <a href="#link1">Link 1</a>
-                <a href="#link2">Link 2</a>
-                <a href="#link3">Link 3</a>
-                <a href="#link4">Link 4</a>
-              </div>
-            </div>
-            <a href="#contact">Contact</a>
+
+            <a href="https://whitewoodmedia.com/contact-us/">Contact Us</a>
+            <a href="https://whitewoodmedia.com/blog/">Blog</a>
           </div>
         
-        
+         
+         
+        </div>
+         
+          <div class="header3column headerRight"> 
+            <button type="button" class="headerButton"><strong>GET A CUSTOM PROPOSAL</strong></button>
+
+
+          </div>
+
+        </div>
+          
+
+
+
+
         </header>
     
 
@@ -538,5 +636,4 @@
     
       </body>
     </html>
- 
  
