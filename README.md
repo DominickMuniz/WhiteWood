@@ -1,4 +1,4 @@
-# WhiteWood
+# WhiteWood Media and Web Development website for coding resources.
 My rebuild of [Whitewood Media]([url](https://whitewoodmedia.com/))
 
 https://whitewoodmedia.com/ website currently live on Wordpress. Which is a site, and business I manage. 
